@@ -5,13 +5,13 @@ import os
 
 # WatsonX.ai 
 watsonx_llm = WatsonxLLM(
-    model_id="meta-llama/llama-3-2-90b-vision-instruct", 
+    model_id="meta-llama/llama-2-13b-chat", 
     url="https://us-south.ml.cloud.ibm.com", 
     apikey=os.getenv("WATSONX_API_KEY"),  
     project_id=os.getenv("WATSONX_PROJECT_ID"), 
     params={
         "decoding_method": "greedy",
-        "max_new_tokens": 500,
+        "max_new_tokens": 200,
         "temperature": 0.3,
         "repetition_penalty": 1.0,
     }

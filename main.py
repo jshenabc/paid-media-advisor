@@ -4,7 +4,10 @@ from fastapi import FastAPI, Form
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from graph.flow import graph_app
+from dotenv import load_dotenv
+import os
 
+load_dotenv() # Load environment variables
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
